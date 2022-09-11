@@ -2,6 +2,15 @@
 
 <script src="a.js"></script>
 <script src="b.js"></script>
+	
+	
+<h2>Number of Javascriot loaded from Browser Cache</h1>
+
+<h1 id="demo"></h1>
+
+<script>
+
+</script>
 
 <script>
 			  var entries = performance.getEntriesByType('resource');
@@ -10,7 +19,8 @@
 				entry.transferSize !=0) 
 				  jsc++;
 			  });
-			  console.log(jsc);
+	document.getElementById("demo").innerHTML = jsc;
+
 </script>
 
 </html>
