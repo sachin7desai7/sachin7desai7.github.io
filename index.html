@@ -1,26 +1,21 @@
 <html>
 
-<script src="a.js"></script>
-<script src="b.js"></script>
+	<script src="a.js"></script>
+	<script src="b.js"></script>
+
+	<h4>Number of Javascriot loaded from Browser Cache</h4>
 	
-	
-<h2>Number of Javascriot loaded from Browser Cache</h1>
+	<h1 id="demo"></h1>
 
-<h1 id="demo"></h1>
-
-<script>
-
-</script>
-
-<script>
-			  var entries = performance.getEntriesByType('resource');
-			  var jsc = 0;
-			  entries.forEach(entry => {if(entry.initiatorType && entry.initiatorType === 'script' && 
-				entry.transferSize !=0) 
-				  jsc++;
-			  });
+	<script>
+	var entries = performance.getEntriesByType('resource');
+	var jsc = 0;
+	entries.forEach(entry => {if(entry.initiatorType && entry.initiatorType === 'script' && 
+		entry.transferSize !=0) 
+		jsc++;
+	  });
 	document.getElementById("demo").innerHTML = jsc;
 
-</script>
+	</script>
 
 </html>
